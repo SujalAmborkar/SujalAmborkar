@@ -1,0 +1,38 @@
+
+public class alarmTest {
+	public static void main(String[] args) {
+		
+		Alarm alarm = new Alarm();
+		alarm.ring();
+	//
+	}
+}
+
+class Alarm
+{
+	void jump() {
+		System.out.println("Alarm: ring():  is ringing...");
+	}
+	public void ring() {
+		// TODO Auto-generated method stub
+		
+	}
+	void jump(int length) {
+		System.out.println("Tiger: jump(int) is jumping..."+length+" feet length");
+	}
+	void jump(int length,int height) {
+		System.out.println("Tiger: jump(int,int) is jumping..."+length+" feet length and  "+height+" feet long height");
+	}
+	void jump(float length) {
+		System.out.println("Tiger: jump(float) is jumping..."+length+" feet length");
+	}
+	
+	void jump(int length,float height) {
+		System.out.println("Tiger: jump(int,float) is jumping..."+length+" feet length and  "+height+" feet long height");
+	}
+	void jump(float length,int height) {
+		System.out.println("Tiger: jump(float,int) is jumping..."+length+" feet length and  "+height+" feet long height");
+	}
+	
+	
+}

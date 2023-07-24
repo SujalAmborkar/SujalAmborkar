@@ -1,0 +1,43 @@
+
+public class alarmTest {
+	public static void main(String[] args) {
+		
+		Alarm alarm = new Alarm();
+		alarm.ring();
+		alarm.ring(10);
+		alarm.ring(12, 6);
+		alarm.ring(9.5f);
+		alarm.ring(12, 6.9f);
+		alarm.ring(4.5f, 7);
+
+	//
+	}
+}
+
+class Alarm
+{
+	void ring() {
+		System.out.println("Alarm: ring():  is ringing...");
+	}
+
+		
+	}
+	void jump(int time) {
+		System.out.println("Alarm: jump(int) is ringing..."+time+" minutes");
+	}
+	void jump(int length,int height) {
+		System.out.println("Alarm: jump(int,int) is jumping..."+length+" feet length and  "+height+" feet long height");
+	}
+	void jump(float length) {
+		System.out.println("Tiger: jump(float) is jumping..."+length+" feet length");
+	}
+	
+	void jump(int length,float height) {
+		System.out.println("Tiger: jump(int,float) is jumping..."+length+" feet length and  "+height+" feet long height");
+	}
+	void jump(float length,int height) {
+		System.out.println("Tiger: jump(float,int) is jumping..."+length+" feet length and  "+height+" feet long height");
+	}
+	
+	
+}

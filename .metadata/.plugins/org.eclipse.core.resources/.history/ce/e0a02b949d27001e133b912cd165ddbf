@@ -1,0 +1,33 @@
+package firstProject;
+
+public class Greeting {
+	public static void main(String[] args) {
+		System.out.println("hello world of java");
+		
+		Cricket cric = new Cricket();
+		cric.printScore();
+		cric.hitSixer();
+		cric.hitSixer();
+		cric.hitSixer();
+		cric.printScore();
+		cric.hitSixer();
+		cric.hitSixer();
+		
+		cric.printScore();
+		
+	}
+}
+
+
+class Cricket{
+	
+	int score;
+	
+	public void hitSixer() {
+		System.out.println("sixer is hit ");
+		score = score+6;
+	}
+	void printScore() {
+		System.out.println("score : "+score);
+	}
+}
