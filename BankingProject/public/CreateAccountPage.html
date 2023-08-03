@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Open Account</title>
+	<link rel="stylesheet" href="CreateAccount.css">
+</head>
+
+
+<body>
+	<script src="CreateAccount.js">
+
+	</script>
+	<h1>Open A Savings Account</h1>
+	<hr>
+	<h2>Personal Details</h2>
+
+	<form>
+		<form>
+
+			<table style="margin-right: auto; margin-left: auto">
+
+
+				<tr>
+					<td>
+						<label>Title*</label>
+					</td>
+					<td>
+						<input type="text" id="title" oninput="validateTitle(this)">
+						<span id="errorTitle" style="color: red;"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>First Name*</label>
+					</td>
+
+					<td>
+						<input type="text" id="firstname" oninput="validateFirstName(this)">
+						<span id="errorFirstname" style="color: red;"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Middle Name</label>
+					</td>
+
+					<td>
+						<input type="text" id="middlename" oninput="validateMiddleName(this)">
+						<span id="errorMiddleName" style="color: red;"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>Last Name*</label>
+					</td>
+					<td>
+						<input type="text" id="lastname" oninput="validateLastName(this)">
+						<span id="errorLastname" style="color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Father's Name*</label>
+					</td>
+					<td>
+						<input type="text" id="fathername" oninput="validateFatherName(this)">
+						<span id="errorFatherName" style="color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Mother's Name*</label>
+					</td>
+					<td>
+						<input type="text" id="mothername" oninput="validateMotherName(this)">
+						<span id="errorMotherName" style="color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Mobile Number*</label>
+					</td>
+					<td>
+						<input type="text" id="mobno" oninput="validateMobno(this)">
+						<span id="errorMobno" style="color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Email ID</label>
+					</td>
+					<td>
+						<input type="text" id="emailField" oninput="validateEmail(this)">
+						<span id="errorText" style="color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Aadhar Card Number*</label>
+					</td>
+					<td>
+						<input type="text" id="adno" oninput="validateAdno(this)">
+						<span id="errorAdno" style="color: red;"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Date of Birth*</label>
+					</td>
+					<td>
+						<input type="date" id="dobField" onchange="validateDateOfBirth(this)">
+						<span id="dobErr" style="color: red;"></span>
+					</td>
+
+		</form>
+		<br>
+		</table>
+		<table>
+			<h3>Residential Address</h3>
+
+
+			<form>
+
+
+				<table style="margin-right: auto; margin-left: auto">
+
+
+					<tr>
+						<td>
+							<label>a)Address Line 1*</label>
+						</td>
+
+						<td>
+							<input type="text" id="addressField1" oninput="validateAddress1(this)">
+							<span id="addressErr1" style="color: red;"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>b)Address Line2*</label>
+						</td>
+
+						<td>
+							<input type="text" id="addressField2" oninput="validateAddress2(this)">
+							<span id="addressErr2" style="color: red;"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>c)Landmark</label>
+						</td>
+
+						<td>
+							<input type="text" id="landmarkField" oninput="validateLandmark(this)">
+							<span id="landmarkErr" style="color: red;"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>d)State*</label>
+						</td>
+						<td>
+							<input type="text" id="state" oninput="validateState(this)">
+							<span id="errorState" style="color: red;"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>e)City*</label>
+						</td>
+						<td>
+							<input type="text" id="firstname" oninput="validateCity(this)">
+							<span id="errorCity" style="color: red;"></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>f)Pincode*</label>
+						</td>
+						<td>
+							<input type="text" onkeyup="clearPassErrMsg()" id="pincode"><span
+								id="pincodeErr"></span><br>
+						</td>
+			</form>
+
+		</table>
+
+
+
+		<table>
+			<h3>Permanent Address</h3>
+
+			<input type="checkbox" unchecked> Permanent Address same as Mailing Address
+
+
+			<form>
+
+
+				<table style="margin-right: auto; margin-left: auto">
+
+
+					<tr>
+						<td>
+							<label>a)Address Line 1*</label>
+						</td>
+
+						<td>
+							<input type=text onkeyup="clearEmailErrMsg()" id="uemail"><span id="emailErr"></span><br>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>b)Address Line2*</label>
+						</td>
+
+						<td>
+							<input type="text" onkeyup="clearDobErrMsg()" id="udob"><span id="dobErr"></span><br>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>c)Landmark</label>
+						</td>
+
+						<td>
+							<input type=text onkeyup="clearNameErrMsg()" id="uname"><span id="nameErr"></span><br>
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							<label>d)State*</label>
+						</td>
+						<td>
+							<input type="text" onkeyup="clearPassErrMsg()" id="upass"><span id="passErr"></span><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>e)City*</label>
+						</td>
+						<td>
+							<input type="text" onkeyup="clearPassErrMsg()" id="upass"><span id="passErr"></span><br>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>f)Pincode*</label>
+						</td>
+			</form>
+
+		</table>
+		<form>
+
+
+			<table style="margin-right: auto; margin-left: auto">
+				<h3>Occupation Details</h3>
+
+				<tr>
+					<td>
+						<label>a)Occupation Type*</label>
+					</td>
+
+					<td>
+						<input type=text onkeyup="clearEmailErrMsg()" id="uemail"><span id="emailErr"></span><br>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>b)Source of Income*</label>
+					</td>
+
+					<td>
+						<input type="text" onkeyup="clearDobErrMsg()" id="udob"><span id="dobErr"></span><br>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<label>c)Gross Annual Income</label>
+					</td>
+
+					<td>
+						<input type=text onkeyup="clearNameErrMsg()" id="uname"><span id="nameErr"></span><br>
+					</td>
+				</tr>
+
+
+		</form>
+
+		</table>
+
+		<h4>Debit/ATM Card</h4>
+		<tr>
+			Do you want a credit card ?*
+		</tr>
+		<br>
+		<input type="checkbox" unchecked> Opt forNet Banking
+		<br>
+		<input type="checkbox" unchecked> I agree......
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+
+</html>

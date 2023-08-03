@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Address Copy</title>
+</head>
+
+<body>
+	<label for="residentialAddress">Residential Address:</label>
+	<input type="text" id="residentialAddress" oninput="validateResidentialAddress()">
+	<br>
+	<label for="permanentAddress">Permanent Address:</label>
+	<input type="text" id="permanentAddress">
+	<br>
+	<input type="checkbox" id="copyAddressCheckbox" onclick="copyResidentialToPermanent()">
+	<label for="copyAddressCheckbox">Copy Residential Address to Permanent Address</label>
+
+	<script>
+		function validateResidentialAddress() {
+			// Implement any validation logic for residential address if needed
+		}
+
+		function copyResidentialToPermanent() {
+			const residentialAddress = document.getElementById('residentialAddress').value.trim();
+			const permanentAddressField = document.getElementById('permanentAddress');
+
+			if (document.getElementById('copyAddressCheckbox').checked) {
+				permanentAddressField.value = residentialAddress;
+				permanentAddressField.setAttribute('disabled', 'disabled');
+			} else {
+				permanentAddressField.value = '';
+				permanentAddressField.removeAttribute('disabled');
+			}
+		}
+	</script>
+</body>
+
+</html>
